@@ -4,6 +4,7 @@ import com.chabbas.stockservice.dao.StockEntity;
 import com.chabbas.stockservice.mapper.StockMapper;
 import com.chabbas.stockservice.model.Stock;
 import com.chabbas.stockservice.repostiory.StockRepository;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -44,6 +45,7 @@ public class StockServiceImpl implements StockService {
         for (StockEntity st : stockEntities) {
             stocks.add(StockMapper.toDto(st));
         }
+        HttpRequest
         return stocks;
     }
 
